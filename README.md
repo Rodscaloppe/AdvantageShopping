@@ -12,31 +12,6 @@ Este projeto contém a automação de testes para o site **Advantage Online Shop
 - [Cypress Image Snapshot](https://github.com/palmerhq/cypress-image-snapshot) - Comparação de screenshots para testes de regressão visual.
 - [dotenv](https://www.npmjs.com/package/dotenv) - Gerenciamento de variáveis de ambiente.
 
-## Estrutura do Projeto
-
-```bash
-cypress/
-|-- e2e/
-|   |-- features/
-|       |-- buscar_produto_api.feature
-|       |-- atualizar_imagem_produto_api.feature
-|   |-- step_definitions/
-|       |-- buscar_produto.js
-|       |-- atualizar_imagem_produto.js
-|-- support/
-|   |-- api/
-|       |-- ProductAPI.js
-|       |-- UserAPI.js
-|   |-- pages/
-|       |-- HomePage.js
-|       |-- ProductPage.js
-|       |-- CartPage.js
-|-- plugins/
-|   |-- index.js
-|-- cypress.config.js
-|-- package.json
-|-- .env
-```
 
 ### Configurações no `.env`
 

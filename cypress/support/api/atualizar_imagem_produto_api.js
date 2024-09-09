@@ -1,6 +1,6 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import ProductAPI from '../../support/api/ProductAPI';
-import UserAPI from '../../support/api/UserAPI';
+import ProductAPI from '../Page/ProductAPI';
+import UserAPI from '../Page/UserAPI';
 
 const productAPI = new ProductAPI();
 const userAPI = new UserAPI();

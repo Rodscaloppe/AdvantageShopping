@@ -1,5 +1,5 @@
 import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
-import ProductAPI from '../../support/api/ProductAPI';
+import ProductAPI from '../Page/ProductAPI';
 
 const productAPI = new ProductAPI();
 
