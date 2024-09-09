@@ -70,7 +70,7 @@ AUTH_TOKEN=your-auth-token-here
 1. **Clone o repositório**
 
    ```bash
-   git clone [https://github.com/seu-usuario/nome-do-projeto.git](https://github.com/Rodscaloppe/AdvantageShopping)
+   git clone https://github.com/Rodscaloppe/AdvantageShopping.git
    cd AdvantageShopping
    ```
 
