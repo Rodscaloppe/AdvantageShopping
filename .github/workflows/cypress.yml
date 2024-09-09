@@ -1,0 +1,56 @@
+name: Cypress Tests
+
+# Dispara o workflow em eventos de push e pull request para a branch main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x] # Ajuste a versão de Node.js conforme necessário
+
+    steps:
+      # Step 1: Verificar o código do repositório
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Instalar o Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Step 3: Instalar as dependências do projeto
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Adicionar as variáveis de ambiente do .env (se necessário)
+      - name: Create .env file
+        run: |
+          echo BASE_URL=https://www.advantageonlineshopping.com >> .env
+          echo USER_ID=$USER_ID >> .env
+          echo AUTH_TOKEN=$AUTH_TOKEN >> .env
+
+        env:
+          USER_ID: ${{ secrets.USER_ID }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+
+      # Step 5: Executar os testes do Cypress
+      - name: Run Cypress tests
+        run: npx cypress run
+
+      # Step 6: Publicar os resultados dos testes no GitHub Actions (opcional)
+      - name: Post Cypress results
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-results
+          path: cypress/results
