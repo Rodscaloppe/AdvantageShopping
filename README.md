@@ -70,8 +70,8 @@ AUTH_TOKEN=your-auth-token-here
 1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
-   cd nome-do-projeto
+   git clone [https://github.com/seu-usuario/nome-do-projeto.git](https://github.com/Rodscaloppe/AdvantageShopping)
+   cd AdvantageShopping
    ```
 
 2. **Instale as dependências do projeto**
