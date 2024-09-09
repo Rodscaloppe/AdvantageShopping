@@ -12,6 +12,46 @@ Este projeto contém a automação de testes para o site **Advantage Online Shop
 - [Cypress Image Snapshot](https://github.com/palmerhq/cypress-image-snapshot) - Comparação de screenshots para testes de regressão visual.
 - [dotenv](https://www.npmjs.com/package/dotenv) - Gerenciamento de variáveis de ambiente.
 
+```bash
+.
+├── .github/
+│   └── workflows/             # Configuração para GitHub Actions
+├── cypress/
+│   ├── e2e/
+│   │   ├── steps/             # Definições de steps do Cucumber
+│   │   │   ├── buscar_produto.js
+│   │   │   ├── buscar_produto_visual.js
+│   │   │   ├── incluir_produto_no_carrinho.js
+│   │   │   ├── validar_produto.js
+│   │   ├── features/          # Arquivos de teste no formato Gherkin (.feature)
+│   │   │   ├── atualizar_imagem.feature
+│   │   │   ├── buscar_produto.feature
+│   │   │   ├── buscar_produto_api.feature
+│   │   │   ├── criar_usuario.feature
+│   │   │   ├── incluir_produto_no_carrinho.feature
+│   │   │   ├── validar_produto.feature
+│   ├── fixtures/              # Arquivos com dados estáticos que podem ser utilizados nos testes
+│   │   └── example.json
+│   ├── plugins/               # Configurações dos plugins do Cypress
+│   │   └── index.js
+│   ├── support/               # Suporte ao projeto com comandos e Page Objects
+│   │   ├── Page/              # Arquivos de Page Objects
+│   │   │   ├── CartPage.js
+│   │   │   ├── HomePage.js
+│   │   │   ├── ProductPage.js
+│   │   ├── api/               # Page Objects para lidar com APIs
+│   │   │   ├── ProductAPI.js
+│   │   │   ├── UserAPI.js
+│   │   │   ├── atualizar_imagem_produto_api.js
+│   │   │   ├── buscar_produto_api.js
+│   │   ├── commands.js        # Custom Cypress commands
+│   │   ├── e2e.js             # Configuração e extensões para o suporte ao Cypress e Cucumber
+│   │   ├── RelatorioCenarios.html  # Relatório gerado dos cenários
+├── .env                       # Arquivo para variáveis de ambiente (configuração)
+├── .gitignore                 # Ignorar arquivos no Git
+├── README.md                  # Instruções e informações do projeto
+
+```
 
 ### Configurações no `.env`
 
