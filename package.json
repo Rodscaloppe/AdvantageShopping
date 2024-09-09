@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "cypress": "^13.14.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-image-snapshot": "^4.0.1",
+    "or": "^0.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

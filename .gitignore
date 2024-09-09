@@ -1,0 +1,12 @@
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+cypress/downloads/
+
+cypress.env.json
+
+node_modules/
+
+logs/
+*.log
+npm-debug.log*

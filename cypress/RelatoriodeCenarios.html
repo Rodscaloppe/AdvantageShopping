@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenários de Teste - Advantage Online Shopping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background-color: #e4e4e4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cenários de Teste - Advantage Online Shopping</h1>
+
+    <h2>1. Cenário: Buscar um Produto Existente</h2>
+    <pre>
+        Feature: Busca de produtos
+        
+        Scenario: Usuário busca por um produto existente
+            Given que o usuário está na página inicial do site
+            When o usuário busca pelo produto "HP Pavilion 15z Laptop"
+            Then o sistema deve exibir os resultados da busca com o produto "HP Pavilion 15z Laptop"
+            And o sistema deve exibir o preço do produto
+    </pre>
+
+    <h2>2. Cenário: Adicionar Produto ao Carrinho</h2>
+    <pre>
+        Feature: Carrinho de compras
+        
+        Scenario: Adicionar um produto ao carrinho
+            Given que o usuário está na página de detalhes do produto "HP Pavilion 15z Laptop"
+            When o usuário clica no botão "Adicionar ao carrinho"
+            Then o sistema deve adicionar o produto ao carrinho
+            And o sistema deve exibir uma notificação de sucesso
+            And o carrinho deve exibir a quantidade "1"
+    </pre>
+
+    <h2>3. Cenário: Remover Produto do Carrinho</h2>
+    <pre>
+        Feature: Carrinho de compras
+        
+        Scenario: Remover um produto do carrinho
+            Given que o usuário tem o produto "HP Pavilion 15z Laptop" no carrinho
+            When o usuário remove o produto do carrinho
+            Then o sistema deve remover o produto do carrinho
+            And o carrinho deve estar vazio
+            And o sistema deve exibir uma mensagem "Seu carrinho está vazio"
+    </pre>
+
+    <h2>4. Cenário: Registrar Novo Usuário</h2>
+    <pre>
+        Feature: Cadastro de usuário
+        
+        Scenario: Registrar um novo usuário com sucesso
+            Given que o usuário está na página de cadastro
+            When o usuário preenche todos os campos obrigatórios com informações válidas
+            And o usuário clica no botão "Registrar"
+            Then o sistema deve criar a conta do usuário
+            And o sistema deve logar o usuário automaticamente
+            And o sistema deve redirecionar o usuário para a página inicial
+    </pre>
+
+    <h2>5. Cenário: Login de Usuário Existente</h2>
+    <pre>
+        Feature: Login de usuário
+        
+        Scenario: Usuário realiza login com sucesso
+            Given que o usuário está na página de login
+            When o usuário preenche o nome de usuário "usuario_teste" e senha "senha123"
+            And o usuário clica no botão "Login"
+            Then o sistema deve autenticar o usuário
+            And o sistema deve redirecionar o usuário para a página inicial
+            And o nome do usuário "usuario_teste" deve ser exibido no cabeçalho
+    </pre>
+
+    <h2>6. Cenário: Atualizar Imagem de Produto</h2>
+    <pre>
+        Feature: Atualizar imagem de produto
+        
+        Scenario: Atualizar a imagem do produto no carrinho
+            Given que o usuário tem um produto no carrinho
+            When o usuário acessa a página de detalhes do produto "HP Pavilion 15z Laptop"
+            And o usuário altera a cor do produto para "Preto"
+            And o usuário clica no botão "Atualizar imagem"
+            Then o sistema deve atualizar a imagem do produto no carrinho com a cor selecionada
+    </pre>
+
+    <h2>7. Cenário: Finalizar Compra com Sucesso</h2>
+    <pre>
+        Feature: Finalizar compra
+        
+        Scenario: Finalizar compra com sucesso
+            Given que o usuário tem produtos no carrinho
+            And o usuário está logado
+            When o usuário acessa a página de checkout
+            And o usuário preenche as informações de pagamento e endereço
+            And o usuário clica no botão "Finalizar compra"
+            Then o sistema deve processar a compra com sucesso
+            And o sistema deve exibir uma mensagem de confirmação "Compra realizada com sucesso"
+    </pre>
+
+</body>
+</html>
