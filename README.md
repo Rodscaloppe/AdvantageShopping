@@ -35,6 +35,10 @@ Este projeto contém a automação de testes para o site **Advantage Online Shop
 │   ├── plugins/               # Configurações dos plugins do Cypress
 │   │   └── index.js
 │   ├── support/               # Suporte ao projeto com comandos e Page Objects
+│   │   ├── locators/           # Arquivos elementos da página
+│   │   │   ├── CartPageLocators.js
+│   │   │   ├── HomePageLocators.js
+│   │   │   └── ProductPageLocators.js
 │   │   ├── Page/              # Arquivos de Page Objects
 │   │   │   ├── CartPage.js
 │   │   │   ├── HomePage.js

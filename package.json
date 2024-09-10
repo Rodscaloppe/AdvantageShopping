@@ -1,11 +1,21 @@
 {
+  "name": "advantage-shopping",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes para Advantage Online Shopping",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",                   
+    "cypress:run": "cypress run",                      
+    "test": "npm run cypress:run",                     
+    "lint": "eslint .",                                 
+    "start": "npm run cypress:open"                     
+  },
   "devDependencies": {
-    "cypress": "^13.14.2",
+    "cypress": "^13.14.2",                             
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-image-snapshot": "^4.0.1",
-    "or": "^0.2.0"
+    "cypress-image-snapshot": "^4.0.1"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5"                                 
   }
 }
