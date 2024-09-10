@@ -38,6 +38,9 @@ Este projeto contém a automação de testes para o site **Advantage Online Shop
 │   │   ├── locators/           # Arquivos elementos da página
 │   │   │   ├── CartPageLocators.js
 │   │   │   ├── HomePageLocators.js
+│   │   │   ├── CheckoutPageLocators.js
+│   │   │   ├── LoginPageLocators.js
+│   │   │   ├── SignUpPageLocators.js
 │   │   │   └── ProductPageLocators.js
 │   │   ├── Page/              # Arquivos de Page Objects
 │   │   │   ├── CartPage.js
